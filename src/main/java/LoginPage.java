@@ -40,6 +40,7 @@ public class LoginPage {
 
     }
     public String getErrorText(){
+
         return driver.findElement(error).getText();
     }
 }

@@ -1,12 +1,15 @@
+package testCases;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
-
-import java.util.concurrent.TimeUnit;
-
+import pages.Login;
+import pages.Profile;
 public class Login_TC {
     static WebDriver driver;
+
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "C:\\WebDrayver\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
@@ -20,9 +23,10 @@ public class Login_TC {
 
         //Using the methods created in pages class to perform actions
         loginPg.LogIn_Action("---your username---", "---your password---");
-        profilePg.verifyUser("---your username---");
-        profilePg.logout_Action();
+//        profilePg.verifyUser("---your username---");
+//        profilePg.logout_Action();
 
         driver.quit();
     }
+
 }
