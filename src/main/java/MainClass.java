@@ -14,7 +14,7 @@ public class MainClass {
         driver.get("https://github.com/");
 //        MainPage mainPage = new MainPage(driver);
         MainPage mainPage = PageFactory.initElements(driver,MainPage.class);
-        mainPage.clikSiginIn();
+        mainPage.clikSeginIn();
 
 
     }

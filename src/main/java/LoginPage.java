@@ -14,20 +14,26 @@ public class LoginPage {
     private By siginInButtonToo = By.xpath("//a[@class='btn btn-primary btn-block js-sign-in-button']");
     private By heading = By.xpath("//div[@class='auth-form-header p-0']/h1");
     private By error = By.xpath("//div[@class='flash flash-full flash-error']");
+    private By createAnAccountLink = By.xpath("//a[text()='Create an account']");
 
     public LoginPage typUserName(String username){
         WebElement usname = driver.findElement(userName);
         usname.click();
         usname.clear();
-        usname.sendKeys("username");
+        usname.sendKeys(username);
         return this;
     }
     public LoginPage typpassWord(String password){
         WebElement pasW = driver.findElement(passWord);
         pasW.click();
         pasW.clear();
-        pasW.sendKeys("password");
+        pasW.sendKeys(password);
         return this;
+    }
+    public SeginUpPage createAnAccount(){
+        driver.findElement(createAnAccountLink).click();
+        return new SeginUpPage(driver);
+
     }
     public LoginPage incorectLogin(String username, String password) {
         this.typUserName(username);

@@ -14,16 +14,28 @@ public class MainPage {
     private WebElement siginInButton ;
 
     @FindBy(xpath = "//a[@class=//a[@class='HeaderMenu-link flex-shrink-0 d-inline-block no-underline border color-border-default rounded px-2 py-1']]")
-    private WebElement siginUpButton ;
+    private WebElement sigenUpButton ;
+
+    public WebElement siginUpButtonv2(){
+        return(this.driver.findElement(By.xpath("//a[@class=//a[@class='HeaderMenu-link flex-shrink-0 d-inline-block no-underline border color-border-default rounded px-2 py-1']]")));
+
+    }
+    @FindBy(xpath =("//button[@class='btn-mktg width-full width-sm-auto btn-signup-mktg']"))
+    private WebElement siginUpButtonv3 ;
 
 
-    public LoginPage clikSiginIn() {
+    public LoginPage clikSeginIn() {
         siginInButton.click();
         return new LoginPage(driver);
 
     }
     public SeginUpPage clikSiginUp() {
-        siginUpButton.click();
+        sigenUpButton.click();
+        return new SeginUpPage(driver);
+
+    }
+    public SeginUpPage clikSiginUpButtonv3() {
+        siginUpButtonv3.click();
         return new SeginUpPage(driver);
 
     }
