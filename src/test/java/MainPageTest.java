@@ -1,3 +1,4 @@
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -14,7 +15,7 @@ public class MainPageTest {
     @Before
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "C:\\WebDrayver\\chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://github.com/");
@@ -22,17 +23,18 @@ public class MainPageTest {
     }
 
     @Test
-    public void seginIn(){
+    public void clikSeginInTest(){
         LoginPage loginPage = mainPage.clikSeginIn();
         String heading = loginPage.getHeadingText();
-        Assert.assertEquals("Sign in to GitHub", heading);
+       Assert.assertEquals("Sign in to GitHub", heading);
 
     }
 
 
-        @After
+    @After
     public void tearDown(){
         driver.quit();
     }
 
 }
+

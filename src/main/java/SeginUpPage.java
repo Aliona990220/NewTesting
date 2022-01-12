@@ -34,6 +34,11 @@ public String getEmailText(){
         return new LoginPage(driver);
 
     }
+    public String getEmailErrText(){
+        return driver.findElement(emailErr).getText();
+    }
 
 }
+
+
 

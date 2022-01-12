@@ -10,7 +10,7 @@ public class MainPage {
     public MainPage(WebDriver driver) {
         this.driver = driver;
     }
-    @FindBy(xpath = "//a[@class='HeaderMenu-link flex-shrink-0 no-underline']")
+    @FindBy(xpath = "//div[@class='position-relative mr-3 mb-4 mb-lg-0 d-inline-block']/a")
     private WebElement siginInButton ;
 
     @FindBy(xpath = "//a[@class=//a[@class='HeaderMenu-link flex-shrink-0 d-inline-block no-underline border color-border-default rounded px-2 py-1']]")
